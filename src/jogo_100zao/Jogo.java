@@ -2,10 +2,9 @@ package jogo_100zao;
 
 public class Jogo {
 	
-	public static void main (String [] args) {
+	public static void main(String [] args) {
 		
-		System.out.println( "JOGO DO 100ZÃO\n" 
-			+ "Bem vindo ao Jogo! \n");
+		System.out.println("JOGO DO 100ZÃO\nBem vindo ao Jogo!\n");
 		
 		System.out.println("COMO JOGAR!!! \n" 
 				+ "O jogo tem 10 partidas, contendo perguntas de conhecimentos gerais. \n" 

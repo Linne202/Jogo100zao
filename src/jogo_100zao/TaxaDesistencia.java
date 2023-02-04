@@ -3,7 +3,7 @@ package jogo_100zao;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Taxa_desistencia {
+public class TaxaDesistencia {
 	
 	public static void main (String [] args) {
 		
