@@ -9,6 +9,7 @@ package jogo_100zao;
 public class Application {
 
 	public static void main(String[] args) {
+		
 		apresentarJogo();
 		Perguntas.iniciar();
 	}
