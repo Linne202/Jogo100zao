@@ -15,12 +15,12 @@ public class TaxaDesistencia {
 		
 		System.out.println("Deseja desistir?");
 		Scanner sc = new Scanner(System.in);
-		String resposta = sc.next();
+		String aa = sc.next();
 	
 		System.out.println("Sua Taxa de desistência é de " + taxa + "%");
 		
 		
-		//System.out.println("Seu prêmio atual é: R$" + premio);
+		System.out.println("Seu prêmio atual é: R$" + premio);
 		System.out.println("O seu prêmio é R$ " + total);
 		
 		sc.close();
