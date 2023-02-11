@@ -9,7 +9,30 @@ package jogo_100zao;
 import java.util.Scanner;
 
 public class Perguntas {
-
+	
+	static Scanner sc = new Scanner(System.in);
+	
+	public static void mostrarPergunta(Pergunta pergunta) {
+		System.out.println(pergunta.frase);
+		System.out.println(pergunta.alternativaA);
+		System.out.println(pergunta.alternativaB);
+		System.out.println(pergunta.alternativaC);
+		System.out.println(pergunta.alternativaD);
+	
+	}
+	
+	public static void verificarResposta(Pergunta perg) {
+		
+		String respostaEscolhida = sc.nextLine();
+		
+		if(respostaEscolhida.equals(perg.respostaCorreta)) {
+			System.out.println("Acertou");
+		} else {
+			System.out.println("\n----------------- Game Over -----------------\n");
+		}
+		
+	}
+	
 	public static void iniciar() {
 
 		Pergunta pergunta1 = new Pergunta();
@@ -20,20 +43,9 @@ public class Perguntas {
 		pergunta1.alternativaD = "d) Austrália";
 		pergunta1.respostaCorreta = "c";
 		
-		System.out.println(pergunta1.frase);
-		System.out.println(pergunta1.alternativaA);
-		System.out.println(pergunta1.alternativaB);
-		System.out.println(pergunta1.alternativaC);
-		System.out.println(pergunta1.alternativaD);
-		
-		Scanner sc = new Scanner(System.in);
-		String respostaEscolhida = sc.nextLine();
-		
-		if(respostaEscolhida.equals(pergunta1.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("\n----------------- Game Over -----------------\n");
-		}
+		mostrarPergunta(pergunta1);
+		verificarResposta(pergunta1);
+	
 		
 		Pergunta pergunta2 = new Pergunta();
 		pergunta2.frase = ".................... P E R G U N T A  02 ....................\n\nQuem é o rei do Pop ?\n";
@@ -43,19 +55,8 @@ public class Perguntas {
 		pergunta2.alternativaD = "d) Micheal Jackson";
 		pergunta2.respostaCorreta = "d";
 		
-		System.out.println(pergunta2.frase);
-		System.out.println(pergunta2.alternativaA);
-		System.out.println(pergunta2.alternativaB);
-		System.out.println(pergunta2.alternativaC);
-		System.out.println(pergunta2.alternativaD);
-		
-		respostaEscolhida = sc.nextLine();
-		
-		if(respostaEscolhida.equals(pergunta2.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
+		mostrarPergunta(pergunta2);
+		verificarResposta(pergunta2);
 		
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = ".................... P E R G U N T A  03 ....................\n\nQuantos ossos tem um corpo humano ?\n";
@@ -65,19 +66,8 @@ public class Perguntas {
 		pergunta3.alternativaD = "d) 206";
 		pergunta3.respostaCorreta = "d";
 		
-		System.out.println(pergunta3.frase);
-		System.out.println(pergunta3.alternativaA);
-		System.out.println(pergunta3.alternativaB);
-		System.out.println(pergunta3.alternativaC);
-		System.out.println(pergunta3.alternativaD);
-		
-		respostaEscolhida = sc.next();
-		
-		if(respostaEscolhida.equals(pergunta3.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
+		mostrarPergunta(pergunta3);
+		verificarResposta(pergunta3);
 		
 		
 		Pergunta pergunta4 = new Pergunta();
@@ -93,14 +83,7 @@ public class Perguntas {
 		System.out.println(pergunta4.alternativaB);
 		System.out.println(pergunta4.alternativaC);
 		System.out.println(pergunta4.alternativaD);
-		
-		respostaEscolhida = sc.next();
-		
-		if(respostaEscolhida.equals(pergunta4.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
+		verificarResposta(pergunta4);
 		
 		Pergunta pergunta5 = new Pergunta();
 		pergunta5.frase = ".................... P E R G U N T A  05 ....................\n\nComplete a música \nOs seus problemas você deve esquecer...\n";
@@ -116,13 +99,8 @@ public class Perguntas {
 		System.out.println(pergunta5.alternativaC);
 		System.out.println(pergunta5.alternativaD);
 		
-		respostaEscolhida = sc.next();
-		
-		if(respostaEscolhida.equals(pergunta5.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
+
+		verificarResposta(pergunta5);
 		
 		Pergunta pergunta6 = new Pergunta();
 		pergunta6.frase = ".................... P E R G U N T A  06 ....................\n\nQuais são os nomes dos cinco oceanos ?\n";
@@ -138,13 +116,8 @@ public class Perguntas {
 		System.out.println(pergunta6.alternativaC);
 		System.out.println(pergunta6.alternativaD);
 		
-		respostaEscolhida = sc.next();
-		
-		if(respostaEscolhida.equals(pergunta6.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
+
+		verificarResposta(pergunta6);
 		
 		
 		Pergunta pergunta7 = new Pergunta();
@@ -155,20 +128,10 @@ public class Perguntas {
 		pergunta7.alternativaD = "d) 5";
 		pergunta7.respostaCorreta = "d";
 		
-		System.out.println(pergunta7.frase);
-		System.out.println(pergunta7.alternativaA);
-		System.out.println(pergunta7.alternativaB);
-		System.out.println(pergunta7.alternativaC);
-		System.out.println(pergunta7.alternativaD);
+
+		verificarResposta(pergunta7);
 		
-		respostaEscolhida = sc.next();
-		
-		if(respostaEscolhida.equals(pergunta7.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
-		
+
 		Pergunta pergunta8 = new Pergunta();
 		pergunta8.frase = ".................... P E R G U N T A  08 ....................\n\nQual é o maior animal vivo do planeta Terra ?\n";
 		pergunta8.alternativaA = "a) Elefante";
@@ -183,14 +146,8 @@ public class Perguntas {
 		System.out.println(pergunta8.alternativaC);
 		System.out.println(pergunta8.alternativaD);
 		
-		respostaEscolhida = sc.next();
-		
-		if(respostaEscolhida.equals(pergunta8.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
-		
+		verificarResposta(pergunta8);
+
 		Pergunta pergunta9 = new Pergunta();
 		pergunta9.frase = ".................... P E R G U N T A  09 ....................\n\nQuantos anos há em dois séculos e meio ?\n";
 		pergunta9.alternativaA = "a) 25 anos";
@@ -205,13 +162,8 @@ public class Perguntas {
 		System.out.println(pergunta9.alternativaC);
 		System.out.println(pergunta9.alternativaD);
 		
-		respostaEscolhida = sc.next();
-		
-		if(respostaEscolhida.equals(pergunta9.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
+
+		verificarResposta(pergunta9);
 		
 		Pergunta pergunta10 = new Pergunta();
 		pergunta10.frase = ".................... P E R G U N T A  10 ....................\n\nA laranja é uma cor ou fruta ?\n";
@@ -227,15 +179,9 @@ public class Perguntas {
 		System.out.println(pergunta10.alternativaC);
 		System.out.println(pergunta10.alternativaD);
 		
-		respostaEscolhida = sc.next();
-		
-		if(respostaEscolhida.equals(pergunta10.respostaCorreta)) {
-			System.out.println("Acertou");
-		} else {
-			System.out.println("----------------- Game Over -----------------");
-		}
-		
+
+		verificarResposta(pergunta10);
 		sc.close();
-	
+		
 	}
 }
