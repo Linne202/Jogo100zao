@@ -5,6 +5,7 @@ package jogo_100zao;
  * @author wiu
  * @since 202302
  */
+
 public class Pergunta {
 
 	String frase;

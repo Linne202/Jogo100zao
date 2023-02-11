@@ -5,6 +5,7 @@ package jogo_100zao;
  * @author linne202
  * @since 20230210
  */
+//*
 
 import java.util.Scanner;
 
