@@ -1,5 +1,11 @@
 package jogo_100zao;
 
+/**	edweweqw
+ * 
+ * @author Linne202
+ * @since 20230216
+ */
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,11 +13,11 @@ public class TaxaDesistencia {
 
 	public static void main(String[] args) {
 
-		calcular();
+		calcularTaxaDesistencia();
 
 	}
 
-	public static void calcular() {
+	public static void calcularTaxaDesistencia() {
 
 		int taxa = new Random().nextInt(10, 35);
 		double multiplicacao = new Random().nextDouble(0.50, 3.00);
