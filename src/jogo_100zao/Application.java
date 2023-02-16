@@ -12,6 +12,7 @@ public class Application {
 		
 		apresentarJogo();
 		Perguntas.iniciar();
+		
 	}
 
 	public static void apresentarJogo() {
