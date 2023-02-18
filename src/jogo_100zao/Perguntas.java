@@ -1,7 +1,7 @@
 package jogo_100zao;
 
 /**
- * 
+ * @author wiu
  * @author linne202
  * @since 20230210
  */
@@ -109,7 +109,7 @@ public class Perguntas {
 		pergunta7.alternativaC = "c) 3";
 		pergunta7.alternativaD = "d) 5";
 		pergunta7.respostaCorreta = "d";
-		
+
 		mostrarPergunta(pergunta7);
 		verificarResposta(pergunta7);
 
