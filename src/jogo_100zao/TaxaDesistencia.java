@@ -1,6 +1,6 @@
 package jogo_100zao;
 
-/**	edweweqw
+/**	
  * 
  * @author Linne202
  * @since 20230216
