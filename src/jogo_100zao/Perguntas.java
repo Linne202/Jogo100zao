@@ -48,12 +48,12 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta1);
 		verificarResposta(pergunta1);
-		System.out.println("Premio atual: " + premio);
+		System.out.println("Premio atual: " +  String.format("%1$,.2f", premio));
 		System.out.println("Deseja parar? 0-nao e 1-sim");
 		int resposta = Integer.parseInt(sc.nextLine());
 		if(resposta == 1) {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Vc ganhou " + premioFinalParticipante);
+			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
 			premio += Premio.calcularPremioFinal(premio);
 		}
@@ -68,12 +68,12 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta2);
 		verificarResposta(pergunta2);
-		System.out.println("Premio atual: " + premio);
+		System.out.println("Premio atual: " + String.format("%1$,.2f", premio));
 		System.out.println("Deseja parar? 0-nao e 1-sim");
 		resposta = Integer.parseInt(sc.nextLine());
 		if(resposta == 1) {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Vc ganhou " + premioFinalParticipante);
+			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
 			premio += Premio.calcularPremioFinal(premio);
 		}
@@ -89,12 +89,12 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta3);
 		verificarResposta(pergunta3);
-		System.out.println("Premio atual: " + premio);
+		System.out.println("Premio atual: " +  String.format("%1$,.2f", premio));
 		System.out.println("Deseja parar? 0-nao e 1-sim");
 		resposta = Integer.parseInt(sc.nextLine());
 		if(resposta == 1) {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Vc ganhou " + premioFinalParticipante);
+			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
 			premio += Premio.calcularPremioFinal(premio);
 		}
