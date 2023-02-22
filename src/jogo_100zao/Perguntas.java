@@ -35,6 +35,8 @@ public class Perguntas {
 	}
 
 	public static void iniciar() {
+		
+		double premio = 2;
 
 		Pergunta pergunta1 = new Pergunta();
 		pergunta1.frase = ".................... P E R G U N T A  01 ....................\n\nQual foi o país que inventou o chuveiro elétrico ?\n";
@@ -46,6 +48,15 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta1);
 		verificarResposta(pergunta1);
+		System.out.println("Premio atual: " + premio);
+		System.out.println("Deseja parar? 0-nao e 1-sim");
+		int resposta = Integer.parseInt(sc.nextLine());
+		if(resposta == 1) {
+			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
+			System.out.println("Vc ganhou " + premioFinalParticipante);
+		} else {
+			premio = premio + 1;
+		}
 
 		Pergunta pergunta2 = new Pergunta();
 		pergunta2.frase = ".................... P E R G U N T A  02 ....................\n\nQuem é o rei do Pop ?\n";
