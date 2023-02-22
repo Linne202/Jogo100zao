@@ -3,13 +3,8 @@ package jogo_100zao;
 import java.util.Scanner;
 
 public class Menu {
-	
-	public static void mostrarMenu(String opcoes) {
-		
-	}
-	
-	public static void iniciar() {
-		
+
+	public static void mostrarMenu() {
 		System.out.println(".......... J O G O   D O   1 0 0 Z Ã O ..........");
 		System.out.println("_________________________________________________\n");
 		System.out.println("		| M E N U |				\n");
@@ -18,10 +13,33 @@ public class Menu {
 		System.out.println("2 - Créditos.");
 		System.out.println("3 - Tutorial");
 		System.out.println("0 - Sair do jogo.\n");
-		
-		System.out.println(".......... T U T O R I A L ..........\n");
-		
-		Scanner sc = new Scanner (System.in);
-		int resposta = sc.nextInt();
+	}
+
+	public static void iniciar() {
+
+		Scanner sc = new Scanner(System.in);
+		int resposta;
+
+		do {
+			
+			mostrarMenu();
+			resposta = sc.nextInt();
+
+			switch (resposta) {
+			case 1:
+				Perguntas.iniciar();
+				break;
+			case 2:
+				System.out.println(".......... Creditos ..........\n");
+				break;
+			case 3:
+				System.out.println(".......... T U T O R I A L ..........\n");
+				break;
+			default:
+				System.out.println("Valor digitado invalido");
+			}
+		} while (resposta != 0);
+
+		sc.close();
 	}
 }
