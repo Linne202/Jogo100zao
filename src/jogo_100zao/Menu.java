@@ -1,13 +1,14 @@
 package jogo_100zao;
 
-public class Menu {
+import java.util.Scanner;
 
+public class Menu {
+	
 	public static void mostrarMenu(String opcoes) {
 		
 	}
 	
-	public static void mostrarOpcoes() {
-		
+	public static void iniciar() {
 		
 		System.out.println(".......... J O G O   D O   1 0 0 Z Ã O ..........");
 		System.out.println("_________________________________________________\n");
@@ -18,5 +19,9 @@ public class Menu {
 		System.out.println("3 - Tutorial");
 		System.out.println("0 - Sair do jogo.\n");
 		
+		System.out.println(".......... T U T O R I A L ..........\n");
+		
+		Scanner sc = new Scanner (System.in);
+		int resposta = sc.nextInt();
 	}
 }
