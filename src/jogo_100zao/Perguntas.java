@@ -36,7 +36,7 @@ public class Perguntas {
 
 	public static void iniciar() {
 		
-		double premio = 2;
+		double premio = Premio.calcularPremioFinal(200);
 
 		Pergunta pergunta1 = new Pergunta();
 		pergunta1.frase = ".................... P E R G U N T A  01 ....................\n\nQual foi o país que inventou o chuveiro elétrico ?\n";
@@ -55,7 +55,7 @@ public class Perguntas {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Vc ganhou " + premioFinalParticipante);
 		} else {
-			premio = premio + 1;
+			premio += Premio.calcularPremioFinal(premio);
 		}
 
 		Pergunta pergunta2 = new Pergunta();
@@ -68,7 +68,17 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta2);
 		verificarResposta(pergunta2);
+		System.out.println("Premio atual: " + premio);
+		System.out.println("Deseja parar? 0-nao e 1-sim");
+		resposta = Integer.parseInt(sc.nextLine());
+		if(resposta == 1) {
+			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
+			System.out.println("Vc ganhou " + premioFinalParticipante);
+		} else {
+			premio += Premio.calcularPremioFinal(premio);
+		}
 
+		
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = ".................... P E R G U N T A  03 ....................\n\nQuantos ossos tem um corpo humano ?\n";
 		pergunta3.alternativaA = "a) 209";
@@ -79,6 +89,15 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta3);
 		verificarResposta(pergunta3);
+		System.out.println("Premio atual: " + premio);
+		System.out.println("Deseja parar? 0-nao e 1-sim");
+		resposta = Integer.parseInt(sc.nextLine());
+		if(resposta == 1) {
+			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
+			System.out.println("Vc ganhou " + premioFinalParticipante);
+		} else {
+			premio += Premio.calcularPremioFinal(premio);
+		}
 
 		Pergunta pergunta4 = new Pergunta();
 		pergunta4.frase = ".................... P E R G U N T A  04 ....................\n\nQual é a sigla do HD ?\n";
