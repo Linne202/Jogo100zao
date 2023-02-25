@@ -28,14 +28,17 @@ public class Menu {
 			resposta = sc.nextInt();
 
 			switch (resposta) {
+			case 0:
+				System.out.println("Obrigado, até mais!!!");
+				break;
 			case 1:
 				Perguntas.iniciar();
 				break;
 			case 2:
-				Creditos.iniciar();
+				Creditos.mostrar();
 				break;
 			case 3:
-				Tutorial.iniciar();
+				Tutorial.mostrar();
 				break;
 			default:
 				System.out.println("Valor digitado invalido");
