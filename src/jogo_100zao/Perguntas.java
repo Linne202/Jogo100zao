@@ -1,5 +1,7 @@
 package jogo_100zao;
 
+import java.util.Random;
+
 /**
  * @author wiu
  * @author linne202
@@ -36,7 +38,7 @@ public class Perguntas {
 
 	public static void iniciar() {
 		
-		double premio = Premio.calcularPremioFinal(200);
+		double premio = new Random().nextDouble(0.5, 3);
 
 		Pergunta pergunta1 = new Pergunta();
 		pergunta1.frase = ".................... P E R G U N T A  01 ....................\n\nQual foi o país que inventou o chuveiro elétrico ?\n";
@@ -55,7 +57,8 @@ public class Perguntas {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
-			premio += Premio.calcularPremioFinal(premio);
+			premio = Premio.calcularPremioFinal(premio);
+			//premio = Premio.calcularPremioFinal(premio);
 		}
 
 		Pergunta pergunta2 = new Pergunta();
@@ -75,7 +78,7 @@ public class Perguntas {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
-			premio += Premio.calcularPremioFinal(premio);
+			premio = Premio.calcularPremioFinal(premio);
 		}
 
 		
@@ -96,7 +99,7 @@ public class Perguntas {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
-			premio += Premio.calcularPremioFinal(premio);
+			premio = Premio.calcularPremioFinal(premio);
 		}
 
 		Pergunta pergunta4 = new Pergunta();
