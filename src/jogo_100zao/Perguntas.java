@@ -56,6 +56,7 @@ public class Perguntas {
 		if(resposta == 1) {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
+			return;
 		} else {
 			premio = Premio.calcularPremioFinal(premio);
 			//premio = Premio.calcularPremioFinal(premio);
