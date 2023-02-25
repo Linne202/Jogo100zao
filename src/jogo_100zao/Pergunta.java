@@ -17,6 +17,7 @@ public class Pergunta {
 	String respostaCorreta;
 	
 	public boolean verificarRespostaCorreta(String alternativa) {
+		
 		return alternativa.equals(respostaCorreta);
 	}
 	

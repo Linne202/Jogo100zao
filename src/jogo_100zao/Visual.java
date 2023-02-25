@@ -14,6 +14,8 @@ public class Visual {
 		String valorUsuario = sc.nextLine();
 		mostrar("oi", 10);
 		mostrar(valorUsuario, 98);
+		
+		sc.close();
 
 	}
 

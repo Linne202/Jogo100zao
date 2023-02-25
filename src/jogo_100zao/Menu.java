@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Menu {
 
 	public static void mostrarMenu() {
+		
 		System.out.println(".......... J O G O   D O   1 0 0 Z Ã O ..........");
 		System.out.println("_________________________________________________\n");
 		System.out.println("		| M E N U |				\n");
@@ -13,6 +14,7 @@ public class Menu {
 		System.out.println("2 - Créditos.");
 		System.out.println("3 - Tutorial");
 		System.out.println("0 - Sair do jogo.\n");
+
 	}
 
 	public static void iniciar() {
@@ -21,7 +23,7 @@ public class Menu {
 		int resposta;
 
 		do {
-			
+
 			mostrarMenu();
 			resposta = sc.nextInt();
 
@@ -30,14 +32,15 @@ public class Menu {
 				Perguntas.iniciar();
 				break;
 			case 2:
-				System.out.println(".......... Creditos ..........\n");
+				Creditos.iniciar();
 				break;
 			case 3:
-				System.out.println(".......... T U T O R I A L ..........\n");
+				Tutorial.iniciar();
 				break;
 			default:
 				System.out.println("Valor digitado invalido");
 			}
+			
 		} while (resposta != 0);
 
 		sc.close();
