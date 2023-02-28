@@ -31,7 +31,7 @@ public class Perguntas {
 		if (respostaEscolhida.equals(perg.respostaCorreta)) {
 			System.out.println("Acertou");
 		} else {
-			System.out.println("\n----------------- Game Over -----------------\n");
+			System.out.println("\n-------------------- Game Over --------------------\n");
 		}
 
 	}
@@ -50,12 +50,11 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta1);
 		verificarResposta(pergunta1);
+		
 		System.out.println("Premio atual: " +  String.format("%1$,.2f", premio));
-		System.out.println("Deseja parar? 0-nao e 1-sim");
+		System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
 		int resposta = Integer.parseInt(sc.nextLine());
 		if(resposta == 1) {
-			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 			return;
 		} else {
 			premio = Premio.calcularPremioFinal(premio);
@@ -107,9 +106,9 @@ public class Perguntas {
 		pergunta4.frase = ".................... P E R G U N T A  04 ....................\n\nQual é a sigla do HD ?\n";
 		pergunta4.alternativaA = "a) Hard Definition";
 		pergunta4.alternativaB = "b) Hardcore";
-		pergunta4.alternativaC = "c) High Dress";
-		pergunta4.alternativaD = "d) Hard";
-		pergunta4.respostaCorreta = "a";
+		pergunta4.alternativaC = "c) Hard Disk";
+		pergunta4.alternativaD = "d) Hight Disk";
+		pergunta4.respostaCorreta = "c";
 
 		mostrarPergunta(pergunta4);
 		verificarResposta(pergunta4);
