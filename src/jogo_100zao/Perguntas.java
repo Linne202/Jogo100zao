@@ -37,7 +37,7 @@ public class Perguntas {
 	}
 
 	public static void iniciar() {
-		
+
 		double premio = new Random().nextDouble(0.5, 3);
 
 		Pergunta pergunta1 = new Pergunta();
@@ -50,15 +50,16 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta1);
 		verificarResposta(pergunta1);
-		
-		System.out.println("Premio atual: " +  String.format("%1$,.2f", premio));
+
 		System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
 		int resposta = Integer.parseInt(sc.nextLine());
-		if(resposta == 1) {
-			return;
+
+		if (resposta == 1) {
+			double premioFinalParticipante = premio;
+			System.out.println("Vc ganhou: R$ " + String.format("%1$,.2f", premioFinalParticipante));
+
 		} else {
-			premio = Premio.calcularPremioFinal(premio);
-			//premio = Premio.calcularPremioFinal(premio);
+			return;
 		}
 
 		Pergunta pergunta2 = new Pergunta();
@@ -74,14 +75,13 @@ public class Perguntas {
 		System.out.println("Premio atual: " + String.format("%1$,.2f", premio));
 		System.out.println("Deseja parar? 0-nao e 1-sim");
 		resposta = Integer.parseInt(sc.nextLine());
-		if(resposta == 1) {
+		if (resposta == 1) {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
 			premio = Premio.calcularPremioFinal(premio);
 		}
 
-		
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = ".................... P E R G U N T A  03 ....................\n\nQuantos ossos tem um corpo humano ?\n";
 		pergunta3.alternativaA = "a) 209";
@@ -92,10 +92,10 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta3);
 		verificarResposta(pergunta3);
-		System.out.println("Premio atual: " +  String.format("%1$,.2f", premio));
+		System.out.println("Premio atual: " + String.format("%1$,.2f", premio));
 		System.out.println("Deseja parar? 0-nao e 1-sim");
 		resposta = Integer.parseInt(sc.nextLine());
-		if(resposta == 1) {
+		if (resposta == 1) {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
