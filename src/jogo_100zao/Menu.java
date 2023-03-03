@@ -8,7 +8,7 @@ public class Menu {
 		
 		System.out.println("......... J O G O   D O   1 0 0 Z Ã O .........");
 		System.out.println("_______________________________________________\n");
-		System.out.println("		| M E N U |				\n");
+		System.out.println("		| M E N U |	\n");
 		System.out.println("Digite o número da opção que você deseja.\n");
 		System.out.println("1 - Começar o jogo.");
 		System.out.println("2 - Créditos.");
