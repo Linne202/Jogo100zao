@@ -1,5 +1,12 @@
 package jogo_100zao;
 
+/**
+ * 
+ * @author linne202
+ * @since 20230302
+ */
+//*
+
 public class Creditos {
 	
 	public static void mostrar() {
