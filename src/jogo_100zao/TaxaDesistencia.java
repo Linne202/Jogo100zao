@@ -6,14 +6,14 @@ package jogo_100zao;
  * @since 20230216
  */
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class TaxaDesistencia {
 
 	
 	public static double calcularPremioFinal(double premioAcumulado) {
 
-		double taxa = new Random().nextDouble(10, 35);
+		double taxa = ThreadLocalRandom.current().nextDouble(10, 35);
 		double valorDesconto = premioAcumulado * taxa/100;
 		premioAcumulado = premioAcumulado - valorDesconto;
 		return premioAcumulado;

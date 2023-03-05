@@ -10,6 +10,7 @@ import java.util.Random;
 //*
 
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Perguntas {
 
@@ -42,7 +43,7 @@ public class Perguntas {
 
 	public static void iniciar() {
 
-		double premio = new Random().nextDouble(0.5, 3);
+		double premio = ThreadLocalRandom.current().nextDouble(0.5, 3);
 		
 		Pergunta pergunta1 = new Pergunta();
 		pergunta1.frase = "............. P E R G U N T A  01 .............\n\nQual foi o país que inventou o chuveiro elétrico ?\n";
