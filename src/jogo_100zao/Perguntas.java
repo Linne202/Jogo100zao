@@ -1,7 +1,5 @@
 package jogo_100zao;
 
-import java.util.Random;
-
 /**
  * @author wiu
  * @author linne202
@@ -36,7 +34,6 @@ public class Perguntas {
 		} else {
 			System.out.println("\n		Y O U   L O S E R\n");
 			Menu.mostrarMenu();
-		
 		}
 
 	}
@@ -55,14 +52,16 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta1);
 		verificarResposta(pergunta1);
+		System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f", premio));
 		
-		System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
+		System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
 		int resposta = Integer.parseInt(sc.nextLine());
 		if (resposta == 1) {
 			double premioFinalParticipante = premio;
 			System.out.println("Vc ganhou: R$ " + String.format("%1$,.2f", premioFinalParticipante));
 		} else {
 			System.out.println("Digite o número de uma das opções!");
+			return;
 		}
 
 		Pergunta pergunta2 = new Pergunta();
@@ -74,8 +73,17 @@ public class Perguntas {
 		pergunta2.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta2);
+		System.out.println("\nPremio atual: " + String.format("%1$,.2f", premio));
 		verificarResposta(pergunta2);
-
+		System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
+		resposta = Integer.parseInt(sc.nextLine());
+		if (resposta == 1) {
+			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
+			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
+		} else {
+			premio = Premio.calcularPremioFinal(premio);
+		}
+		
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = "............. P E R G U N T A  03 .............\n\nQuantos ossos tem um corpo humano ?\n";
 		pergunta3.alternativaA = "a) 209";

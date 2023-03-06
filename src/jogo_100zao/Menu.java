@@ -41,7 +41,7 @@ public class Menu {
 				Tutorial.mostrar();
 				break;
 			default:
-				System.out.println("Valor digitado invalido");
+				System.out.println("Valor digitado invalido\n");
 			}
 			
 		} while (resposta != 0);

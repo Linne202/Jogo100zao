@@ -1,5 +1,12 @@
 package jogo_100zao;
 
+/**
+ * 
+ * @author lannaleny
+ * @since 20230304
+ */
+
+//*
 public class Tutorial {
 	
 	public static void mostrar() {
