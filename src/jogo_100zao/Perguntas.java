@@ -52,6 +52,9 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta1);
 		verificarResposta(pergunta1);
+		
+		//depois de aparecer YOU LOSER, o jogo volta para aqui 
+		
 		System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f", premio));
 		
 		System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
