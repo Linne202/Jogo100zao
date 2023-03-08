@@ -15,7 +15,7 @@ public class Perguntas {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void mostrarPergunta(Pergunta pergunta) {
-		
+
 		System.out.println(pergunta.frase);
 		System.out.println(pergunta.alternativaA);
 		System.out.println(pergunta.alternativaB);
@@ -24,16 +24,16 @@ public class Perguntas {
 
 	}
 
-	public static void verificarResposta(Pergunta perg) {
+	public static boolean respostaEstaCorreta(Pergunta perg) {
 
 		String respostaEscolhida = sc.nextLine();
 
 		if (respostaEscolhida.equals(perg.respostaCorreta)) {
-			
 			System.out.println("Parabéns, você acertou :)\n");
+			return true;
 		} else {
 			System.out.println("\n		Y O U   L O S E R\n");
-			Menu.mostrarMenu();
+			return false;
 		}
 
 	}
@@ -41,7 +41,7 @@ public class Perguntas {
 	public static void iniciar() {
 
 		double premio = ThreadLocalRandom.current().nextDouble(0.5, 3);
-		
+
 		Pergunta pergunta1 = new Pergunta();
 		pergunta1.frase = "............. P E R G U N T A  01 .............\n\nQual foi o país que inventou o chuveiro elétrico ?\n";
 		pergunta1.alternativaA = "a) França";
@@ -51,19 +51,19 @@ public class Perguntas {
 		pergunta1.respostaCorreta = "c";
 
 		mostrarPergunta(pergunta1);
-		verificarResposta(pergunta1);
-		
-		//depois de aparecer YOU LOSER, o jogo volta para aqui 
-		
+		boolean respostaCorreta = respostaEstaCorreta(pergunta1);
+		if (respostaCorreta == false) {
+			return;
+		}
+
 		System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f", premio));
-		
-		System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
+
+		System.out.println(
+				"\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
 		int resposta = Integer.parseInt(sc.nextLine());
 		if (resposta == 1) {
 			double premioFinalParticipante = premio;
 			System.out.println("Vc ganhou: R$ " + String.format("%1$,.2f", premioFinalParticipante));
-		} else {
-			System.out.println("Digite o número de uma das opções!");
 			return;
 		}
 
@@ -77,7 +77,7 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta2);
 		System.out.println("\nPremio atual: " + String.format("%1$,.2f", premio));
-		verificarResposta(pergunta2);
+		respostaEstaCorreta(pergunta2);
 		System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
 		resposta = Integer.parseInt(sc.nextLine());
 		if (resposta == 1) {
@@ -86,7 +86,7 @@ public class Perguntas {
 		} else {
 			premio = Premio.calcularPremioFinal(premio);
 		}
-		
+
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = "............. P E R G U N T A  03 .............\n\nQuantos ossos tem um corpo humano ?\n";
 		pergunta3.alternativaA = "a) 209";
@@ -96,7 +96,7 @@ public class Perguntas {
 		pergunta3.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta3);
-		verificarResposta(pergunta3);
+		respostaEstaCorreta(pergunta3);
 
 		Pergunta pergunta4 = new Pergunta();
 		pergunta4.frase = "............. P E R G U N T A  04 .............\n\nQual é a sigla do HD ?\n";
@@ -107,7 +107,7 @@ public class Perguntas {
 		pergunta4.respostaCorreta = "c";
 
 		mostrarPergunta(pergunta4);
-		verificarResposta(pergunta4);
+		respostaEstaCorreta(pergunta4);
 
 		Pergunta pergunta5 = new Pergunta();
 		pergunta5.frase = "............. P E R G U N T A  05 .............\n\nComplete a música \nOs seus problemas você deve esquecer...\n";
@@ -118,7 +118,7 @@ public class Perguntas {
 		pergunta5.respostaCorreta = "b";
 
 		mostrarPergunta(pergunta5);
-		verificarResposta(pergunta5);
+		respostaEstaCorreta(pergunta5);
 
 		Pergunta pergunta6 = new Pergunta();
 		pergunta6.frase = "............. P E R G U N T A  06 .............\n\nQuais são os nomes dos cinco oceanos ?\n";
@@ -129,7 +129,7 @@ public class Perguntas {
 		pergunta6.respostaCorreta = "c";
 
 		mostrarPergunta(pergunta6);
-		verificarResposta(pergunta6);
+		respostaEstaCorreta(pergunta6);
 
 		Pergunta pergunta7 = new Pergunta();
 		pergunta7.frase = "............. P E R G U N T A  07 .............\n\nQuantas vezes o Brasil foi campeão da Copa do Mundo ?\n";
@@ -140,7 +140,7 @@ public class Perguntas {
 		pergunta7.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta7);
-		verificarResposta(pergunta7);
+		respostaEstaCorreta(pergunta7);
 
 		Pergunta pergunta8 = new Pergunta();
 		pergunta8.frase = "............. P E R G U N T A  08 .............\n\nQual é o maior animal vivo do planeta Terra ?\n";
@@ -151,7 +151,7 @@ public class Perguntas {
 		pergunta8.respostaCorreta = "b";
 
 		mostrarPergunta(pergunta8);
-		verificarResposta(pergunta8);
+		respostaEstaCorreta(pergunta8);
 
 		Pergunta pergunta9 = new Pergunta();
 		pergunta9.frase = "............. P E R G U N T A  09 .............\n\nQuantos anos há em dois séculos e meio ?\n";
@@ -162,7 +162,7 @@ public class Perguntas {
 		pergunta9.respostaCorreta = "b";
 
 		mostrarPergunta(pergunta9);
-		verificarResposta(pergunta9);
+		respostaEstaCorreta(pergunta9);
 
 		Pergunta pergunta10 = new Pergunta();
 		pergunta10.frase = "............. P E R G U N T A  10 .............\n\nA laranja é uma cor ou fruta ?\n";
@@ -173,8 +173,25 @@ public class Perguntas {
 		pergunta10.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta10);
-		verificarResposta(pergunta10);
+		respostaEstaCorreta(pergunta10);
 		sc.close();
-
 	}
+
+	public static void main(String[] args) {
+		boolean vaiChover = true;
+		boolean meuAniversion = false;
+		
+		System.out.println(vaiChover);
+		System.out.println(meuAniversion);
+		int aluno1 = 15;
+		int aluno2 = 18;
+		boolean aluno1MaiorIdade = aluno1 > aluno2;
+
+		if (aluno1MaiorIdade) {
+			System.out.println("O aluno 1 é maior");
+		}
+	}
+
 }
+
+//Application > Menu > Perguntas > Menu > Perguntas > Menu > Perguntas
