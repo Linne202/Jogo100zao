@@ -2,7 +2,7 @@ package jogo_100zao;
 
 /***
  * @author Linne202
- * @author wiu
+ * @author wiu0
  * @since 202302
  *
  */

@@ -1,7 +1,7 @@
 package jogo_100zao;
 
 /**
- * @author wiu
+ * @author wiu0
  * @author linne202
  * @since 20230210
  */
@@ -51,14 +51,17 @@ public class Perguntas {
 		pergunta1.respostaCorreta = "c";
 
 		mostrarPergunta(pergunta1);
+		
 		boolean respostaCorreta = respostaEstaCorreta(pergunta1);
+		
 		if (respostaCorreta == false) {
 			return;
 		} else {
+			System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f\n", premio));
+			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
+			System.out.println("Seu prêmio com desconto:" + String.format("%1$,.2f\n", premioFinalParticipante));
 			VerificacaoDeValidacao.textoDeDesistencencia();
 		}
-
-		System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f", premio));
 
 		//System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
 		//int resposta = Integer.parseInt(sc.nextLine());
@@ -77,8 +80,8 @@ public class Perguntas {
 		pergunta2.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta2);
-		//System.out.println("\nPremio atual: " + String.format("%1$,.2f", premio));
 		respostaEstaCorreta(pergunta2);
+		//System.out.println("\nPremio atual: " + String.format("%1$,.2f", premio));
 		//System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
 		//resposta = Integer.parseInt(sc.nextLine());
 		//if (resposta == 1) {
@@ -176,23 +179,8 @@ public class Perguntas {
 		mostrarPergunta(pergunta10);
 		respostaEstaCorreta(pergunta10);
 		sc.close();
-	}
 
-	public static void main(String[] args) {
-		boolean vaiChover = true;
-		boolean meuAniversion = false;
-		
-		System.out.println(vaiChover);
-		System.out.println(meuAniversion);
-		int aluno1 = 15;
-		int aluno2 = 18;
-		boolean aluno1MaiorIdade = aluno1 > aluno2;
-
-		if (aluno1MaiorIdade) {
-			System.out.println("O aluno 1 é maior");
-		}
 	}
 
 }
 
-//Application > Menu > Perguntas > Menu > Perguntas > Menu > Perguntas

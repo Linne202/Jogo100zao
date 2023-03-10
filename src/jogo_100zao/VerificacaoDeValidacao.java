@@ -7,7 +7,7 @@ public class VerificacaoDeValidacao {
 	public static boolean textoDeDesistencencia() {
 
 		System.out.println("Você deseja desistir?");
-		System.out.println("Digite 1 para sim e 2 para não.");
+		System.out.println("Digite 1 para SIM e 2 para NÃO");
 
 		Scanner sc = new Scanner(System.in);
 		int resposta = sc.nextInt();
