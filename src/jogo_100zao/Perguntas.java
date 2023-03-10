@@ -54,18 +54,19 @@ public class Perguntas {
 		boolean respostaCorreta = respostaEstaCorreta(pergunta1);
 		if (respostaCorreta == false) {
 			return;
+		} else {
+			VerificacaoDeValidacao.textoDeDesistencencia();
 		}
 
 		System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f", premio));
 
-		System.out.println(
-				"\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
-		int resposta = Integer.parseInt(sc.nextLine());
-		if (resposta == 1) {
-			double premioFinalParticipante = premio;
-			System.out.println("Vc ganhou: R$ " + String.format("%1$,.2f", premioFinalParticipante));
-			return;
-		}
+		//System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
+		//int resposta = Integer.parseInt(sc.nextLine());
+		//if (resposta == 1) {
+			//double premioFinalParticipante = premio;
+			//System.out.println("Vc ganhou: R$ " + String.format("%1$,.2f", premioFinalParticipante));
+			//return;
+		//}
 
 		Pergunta pergunta2 = new Pergunta();
 		pergunta2.frase = "............. P E R G U N T A  02 .............\n\nQuem é o rei do Pop ?\n";
@@ -76,16 +77,16 @@ public class Perguntas {
 		pergunta2.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta2);
-		System.out.println("\nPremio atual: " + String.format("%1$,.2f", premio));
+		//System.out.println("\nPremio atual: " + String.format("%1$,.2f", premio));
 		respostaEstaCorreta(pergunta2);
-		System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
-		resposta = Integer.parseInt(sc.nextLine());
-		if (resposta == 1) {
-			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
-		} else {
-			premio = Premio.calcularPremioFinal(premio);
-		}
+		//System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
+		//resposta = Integer.parseInt(sc.nextLine());
+		//if (resposta == 1) {
+			//double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
+			//System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
+		//} else {
+			//premio = Premio.calcularPremioFinal(premio);
+		//}
 
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = "............. P E R G U N T A  03 .............\n\nQuantos ossos tem um corpo humano ?\n";

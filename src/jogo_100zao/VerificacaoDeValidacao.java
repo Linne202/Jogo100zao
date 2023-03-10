@@ -1,19 +1,22 @@
 package jogo_100zao;
 
+import java.util.Scanner;
+
 public class VerificacaoDeValidacao {
-	
-	public static void main (String[]args) {
-		
-	}
-		
-		public static void textoDeDesistencencia () {
-			
+
+	public static boolean textoDeDesistencencia() {
+
 		System.out.println("Você deseja desistir?");
 		System.out.println("Digite 1 para sim e 2 para não.");
-		System.out.println("Sua taxa de desistência é" );
-		System.out.println("Deseja prosseguir?");
-		System.out.println("Digite 1 para sim e 2 para não.");
-		
+
+		Scanner sc = new Scanner(System.in);
+		int resposta = sc.nextInt();
+
+		if (resposta == 1) {
+			System.out.println("Até uma próxima jogatina!/n :)");
+			return true;
+		}
+		return false;
 	}
 
 }
