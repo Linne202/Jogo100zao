@@ -60,7 +60,11 @@ public class Perguntas {
 			System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f\n", premio));
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Seu prêmio com desconto:" + String.format("%1$,.2f\n", premioFinalParticipante));
-			VerificacaoDeValidacao.textoDeDesistencencia();
+			
+			boolean desejaDesistir = VerificacaoDeValidacao.desejaDesistir(premioFinalParticipante);
+			if(desejaDesistir == true) {
+				return;
+			}
 		}
 
 		//System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
