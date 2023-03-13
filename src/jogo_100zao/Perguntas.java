@@ -51,9 +51,9 @@ public class Perguntas {
 		pergunta1.respostaCorreta = "c";
 
 		mostrarPergunta(pergunta1);
-		
+
 		boolean respostaCorreta = respostaEstaCorreta(pergunta1);
-		
+
 		if (respostaCorreta == false) {
 			return;
 		} else {
@@ -61,15 +61,18 @@ public class Perguntas {
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Seu prêmio com desconto:" + String.format("%1$,.2f\n", premioFinalParticipante));
 			VerificacaoDeValidacao.textoDeDesistencencia();
+			premio = Premio.calcularPremioFinal(premio);
 		}
 
-		//System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio receberá um desconto!\n0 - Não e 1 - Sim\n");
-		//int resposta = Integer.parseInt(sc.nextLine());
-		//if (resposta == 1) {
-			//double premioFinalParticipante = premio;
-			//System.out.println("Vc ganhou: R$ " + String.format("%1$,.2f", premioFinalParticipante));
-			//return;
-		//}
+		// System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio
+		// receberá um desconto!\n0 - Não e 1 - Sim\n");
+		// int resposta = Integer.parseInt(sc.nextLine());
+		// if (resposta == 1) {
+		// double premioFinalParticipante = premio;
+		// System.out.println("Vc ganhou: R$ " + String.format("%1$,.2f",
+		// premioFinalParticipante));
+		// return;
+		// }
 
 		Pergunta pergunta2 = new Pergunta();
 		pergunta2.frase = "............. P E R G U N T A  02 .............\n\nQuem é o rei do Pop ?\n";
@@ -80,16 +83,17 @@ public class Perguntas {
 		pergunta2.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta2);
-		respostaEstaCorreta(pergunta2);
-		//System.out.println("\nPremio atual: " + String.format("%1$,.2f", premio));
-		//System.out.println("Deseja continuar?\n0 - Não e 1 - Sim");
-		//resposta = Integer.parseInt(sc.nextLine());
-		//if (resposta == 1) {
-			//double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			//System.out.println("Vc ganhou " + String.format("%1$,.2f", premioFinalParticipante));
-		//} else {
-			//premio = Premio.calcularPremioFinal(premio);
-		//}
+		respostaCorreta = respostaEstaCorreta(pergunta2);
+
+		if (respostaCorreta == false) {
+			return;
+		} else {
+			System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f\n", premio));
+			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
+			System.out.println("Seu prêmio com desconto:" + String.format("%1$,.2f\n", premioFinalParticipante));
+			VerificacaoDeValidacao.textoDeDesistencencia();
+			premio = Premio.calcularPremioFinal(premio);
+		}
 
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = "............. P E R G U N T A  03 .............\n\nQuantos ossos tem um corpo humano ?\n";
@@ -100,8 +104,17 @@ public class Perguntas {
 		pergunta3.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta3);
-		respostaEstaCorreta(pergunta3);
+		respostaCorreta = respostaEstaCorreta(pergunta3);
 
+		if (respostaCorreta == false) {
+			return;
+		} else {
+			System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f\n", premio));
+			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
+			System.out.println("Seu prêmio com desconto:" + String.format("%1$,.2f\n", premioFinalParticipante));
+			VerificacaoDeValidacao.textoDeDesistencencia();
+			premio = Premio.calcularPremioFinal(premio);
+		}
 		Pergunta pergunta4 = new Pergunta();
 		pergunta4.frase = "............. P E R G U N T A  04 .............\n\nQual é a sigla do HD ?\n";
 		pergunta4.alternativaA = "a) Hard Definition";
@@ -183,4 +196,3 @@ public class Perguntas {
 	}
 
 }
-
