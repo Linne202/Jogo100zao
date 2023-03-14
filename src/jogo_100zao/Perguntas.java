@@ -24,20 +24,6 @@ public class Perguntas {
 
 	}
 
-	public static boolean respostaEstaCorreta(Pergunta perg) {
-
-		String respostaEscolhida = sc.nextLine();
-
-		if (respostaEscolhida.equals(perg.respostaCorreta)) {
-			System.out.println("Parabéns, você acertou :)\n");
-			return true;
-		} else {
-			System.out.println("\n		Y O U   L O S E R\n");
-			return false;
-		}
-
-	}
-
 	public static void iniciar() {
 
 		double premio = ThreadLocalRandom.current().nextDouble(0.5, 3);
@@ -52,7 +38,7 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta1);
 
-		boolean respostaCorreta = respostaEstaCorreta(pergunta1);
+		boolean respostaCorreta = RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta1);
 
 		if (respostaCorreta == false) {
 			return;
@@ -64,16 +50,6 @@ public class Perguntas {
 			premio = Premio.calcularPremioFinal(premio);
 		}
 
-		// System.out.println("\nDeseja continuar?\nSe você desistir o seu prêmio
-		// receberá um desconto!\n0 - Não e 1 - Sim\n");
-		// int resposta = Integer.parseInt(sc.nextLine());
-		// if (resposta == 1) {
-		// double premioFinalParticipante = premio;
-		// System.out.println("Vc ganhou: R$ " + String.format("%1$,.2f",
-		// premioFinalParticipante));
-		// return;
-		// }
-
 		Pergunta pergunta2 = new Pergunta();
 		pergunta2.frase = "............. P E R G U N T A  02 .............\n\nQuem é o rei do Pop ?\n";
 		pergunta2.alternativaA = "a) Elvis Presley ";
@@ -83,7 +59,7 @@ public class Perguntas {
 		pergunta2.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta2);
-		respostaCorreta = respostaEstaCorreta(pergunta2);
+		respostaCorreta = RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta2);
 
 		if (respostaCorreta == false) {
 			return;
@@ -104,7 +80,7 @@ public class Perguntas {
 		pergunta3.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta3);
-		respostaCorreta = respostaEstaCorreta(pergunta3);
+		respostaCorreta = RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta3);
 
 		if (respostaCorreta == false) {
 			return;
@@ -124,7 +100,7 @@ public class Perguntas {
 		pergunta4.respostaCorreta = "c";
 
 		mostrarPergunta(pergunta4);
-		respostaEstaCorreta(pergunta4);
+		RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta4);
 
 		Pergunta pergunta5 = new Pergunta();
 		pergunta5.frase = "............. P E R G U N T A  05 .............\n\nComplete a música \nOs seus problemas você deve esquecer...\n";
@@ -135,7 +111,7 @@ public class Perguntas {
 		pergunta5.respostaCorreta = "b";
 
 		mostrarPergunta(pergunta5);
-		respostaEstaCorreta(pergunta5);
+		RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta5);
 
 		Pergunta pergunta6 = new Pergunta();
 		pergunta6.frase = "............. P E R G U N T A  06 .............\n\nQuais são os nomes dos cinco oceanos ?\n";
@@ -146,7 +122,7 @@ public class Perguntas {
 		pergunta6.respostaCorreta = "c";
 
 		mostrarPergunta(pergunta6);
-		respostaEstaCorreta(pergunta6);
+		RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta6);
 
 		Pergunta pergunta7 = new Pergunta();
 		pergunta7.frase = "............. P E R G U N T A  07 .............\n\nQuantas vezes o Brasil foi campeão da Copa do Mundo ?\n";
@@ -157,7 +133,7 @@ public class Perguntas {
 		pergunta7.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta7);
-		respostaEstaCorreta(pergunta7);
+		RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta7);
 
 		Pergunta pergunta8 = new Pergunta();
 		pergunta8.frase = "............. P E R G U N T A  08 .............\n\nQual é o maior animal vivo do planeta Terra ?\n";
@@ -168,7 +144,7 @@ public class Perguntas {
 		pergunta8.respostaCorreta = "b";
 
 		mostrarPergunta(pergunta8);
-		respostaEstaCorreta(pergunta8);
+		RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta8);
 
 		Pergunta pergunta9 = new Pergunta();
 		pergunta9.frase = "............. P E R G U N T A  09 .............\n\nQuantos anos há em dois séculos e meio ?\n";
@@ -179,7 +155,7 @@ public class Perguntas {
 		pergunta9.respostaCorreta = "b";
 
 		mostrarPergunta(pergunta9);
-		respostaEstaCorreta(pergunta9);
+		RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta9);
 
 		Pergunta pergunta10 = new Pergunta();
 		pergunta10.frase = "............. P E R G U N T A  10 .............\n\nA laranja é uma cor ou fruta ?\n";
@@ -190,7 +166,7 @@ public class Perguntas {
 		pergunta10.respostaCorreta = "d";
 
 		mostrarPergunta(pergunta10);
-		respostaEstaCorreta(pergunta10);
+		RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta10);
 		sc.close();
 
 	}
