@@ -10,10 +10,10 @@ public class RespostaEstaCorreta {
 		String respostaEscolhida = sc.nextLine();
 
 		if (respostaEscolhida.equals(perg.respostaCorreta)) {
-			System.out.println("Parabéns, você acertou :)\n");
+			System.out.println("_____________ V O C Ê   A C E R T O U _____________\n");
 			return true;
 		} else {
-			System.out.println("\n		Y O U   L O S E R\n");
+			System.out.println("\n____________ Y O U   L O S E R ____________\n");
 			return false;
 		}
 

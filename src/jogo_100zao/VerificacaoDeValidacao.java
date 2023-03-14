@@ -14,8 +14,8 @@ public class VerificacaoDeValidacao {
 
 		if (resposta == 1) {
 			double valorFinal = TaxaDesistencia.calcularPremioFinal(premioAcumulado);
-			System.out.println("Até uma próxima jogatina!/n :)");
-			System.out.println("Vc ganhou: " + valorFinal);
+			System.out.println("Seu saldo: R$" + String.format("%1$,.2f\n", valorFinal));
+			System.out.println("... I S S O   É   T U D O   P E S S O A L ...\n");
 			return true;
 		}
 		return false;
