@@ -22,16 +22,17 @@ public class VerificacaoDeValidacao {
 		System.out.println("Você deseja desistir?");
 		System.out.println("Digite 1 para SIM e 2 para NÃO");
 		Scanner sc = new Scanner(System.in);
-		int resposta = sc.nextInt();
 
 		try {
 
 		} catch (InputMismatchException erroDeInput) {
 			System.out.println("Por favor, digite um númedo dentro das opções!");
+			int resposta = sc.nextInt();
 			resposta = sc.nextInt();
 		} catch (Exception e) {
 			System.out.println("Erro: " + e);
 			System.out.println("Por favor, digite um númedo dentro das opções!");
+			int resposta = sc.nextInt();
 			resposta = sc.nextInt();
 		}
 		sc.close(); 
