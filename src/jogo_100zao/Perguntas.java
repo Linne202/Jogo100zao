@@ -71,7 +71,7 @@ public class Perguntas {
 			System.out.println("- Seu prêmio atual é: R$" + String.format("%1$,.2f\n", premio));
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Seu prêmio com desconto: R$" + String.format("%1$,.2f\n", premioFinalParticipante));
-			VerificacaoDeValidacao.desejaDesistir(premioFinalParticipante);
+			VerificacaoDeValidacao.mostraTextoDeDesistencia();
 			premio = Premio.calcularPremioFinal(premio);
 			if (desejaDesistir == true) {
 				return;
@@ -96,7 +96,7 @@ public class Perguntas {
 			System.out.println("- Seu prêmio atual é: R$" + String.format("%1$,.2f\n", premio));
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Seu prêmio com desconto: R$" + String.format("%1$,.2f\n", premioFinalParticipante));
-			VerificacaoDeValidacao.desejaDesistir(premioFinalParticipante);
+			VerificacaoDeValidacao.mostraTextoDeDesistencia();
 			premio = Premio.calcularPremioFinal(premio);
 			if (desejaDesistir == true) {
 				return;

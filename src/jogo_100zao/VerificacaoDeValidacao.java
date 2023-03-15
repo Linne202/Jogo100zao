@@ -1,6 +1,7 @@
 package jogo_100zao;
 
 import java.util.InputMismatchException;
+import java.util.Scanner;
 
 /***
  * 
@@ -9,47 +10,54 @@ import java.util.InputMismatchException;
  *
  */
 
-import java.util.Scanner;
-
 public class VerificacaoDeValidacao {
 
-	boolean continuarTry;
-
-	public static boolean desejaDesistir(double premioAcumulado) {
+	public static void mostraTextoDeDesistencia() {
 		
+	boolean continuarTry = false;
+	
 	do
 	{
 
 		System.out.println("Você deseja desistir?");
 		System.out.println("Digite 1 para SIM e 2 para NÃO");
+		Scanner sc = new Scanner(System.in);
+		int resposta = sc.nextInt();
 
 		try {
 
 		} catch (InputMismatchException erroDeInput) {
 			System.out.println("Por favor, digite um númedo dentro das opções!");
+			resposta = sc.nextInt();
 		} catch (Exception e) {
 			System.out.println("Erro: " + e);
+			System.out.println("Por favor, digite um númedo dentro das opções!");
+			resposta = sc.nextInt();
 		}
+		sc.close(); 
 
 	}while(continuarTry);
+
 	}
 
-	public static boolean desejaDesistir(double premioAcumulado) {
-		
-		System.out.println("Você deseja desistir?");
-		System.out.println("Digite 1 para SIM e 2 para NÃO");
+		public static boolean desejaDesistir(double premioAcumulado) {
 
-		Scanner sc = new Scanner(System.in);
-		int resposta = sc.nextInt();
+			System.out.println("Você deseja desistir?");
+			System.out.println("Digite 1 para SIM e 2 para NÃO");
 
-		if (resposta == 1) {
-			double valorFinal = TaxaDesistencia.calcularPremioFinal(premioAcumulado);
-			System.out.println("Seu saldo: R$" + String.format("%1$,.2f\n", valorFinal));
-			System.out.println("... I S S O   É   T U D O   P E S S O A L ...\n");
-			return true;
+			Scanner sc = new Scanner(System.in);
+			int resposta = sc.nextInt();
+
+			if (resposta == 1) {
+				double valorFinal = TaxaDesistencia.calcularPremioFinal(premioAcumulado);
+				System.out.println("Seu saldo: R$" + String.format("%1$,.2f\n", valorFinal));
+				System.out.println("... I S S O   É   T U D O   P E S S O A L ...\n");
+				return true;
+			}
+			return false;
+			
 		}
-		return false;
-	}
+	
 }
 
-}
+
