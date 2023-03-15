@@ -1,11 +1,25 @@
 package jogo_100zao;
 
-public class LeitorDeDados {
+import java.util.Scanner;
 
-	public static void verifificarDados() {
-		
-		
-		
+public class LeitorDeDados {
+	
+	private static Scanner scanner;
+	
+	public LeitorDeDados() {
+		scanner = new Scanner(System.in);
+	}
+
+	public static int leitorDeNumeroInteiro() {
+		return scanner.nextInt();
+	}
+	
+	public static String leitorDeTexto() {
+		return scanner.nextLine();
+	}
+	
+	public void fecharLeitor() {
+		scanner.close();
 	}
 	
 }
