@@ -1,11 +1,41 @@
 package jogo_100zao;
 
+import java.util.InputMismatchException;
+
+/***
+ * 
+ * @author Linne202
+ * @since 202303
+ *
+ */
+
 import java.util.Scanner;
 
 public class VerificacaoDeValidacao {
 
-	public static boolean desejaDesistir(double premioAcumulado) {
+	boolean continuarTry;
 
+	public static boolean desejaDesistir(double premioAcumulado) {
+		
+	do
+	{
+
+		System.out.println("Você deseja desistir?");
+		System.out.println("Digite 1 para SIM e 2 para NÃO");
+
+		try {
+
+		} catch (InputMismatchException erroDeInput) {
+			System.out.println("Por favor, digite um númedo dentro das opções!");
+		} catch (Exception e) {
+			System.out.println("Erro: " + e);
+		}
+
+	}while(continuarTry);
+	}
+
+	public static boolean desejaDesistir(double premioAcumulado) {
+		
 		System.out.println("Você deseja desistir?");
 		System.out.println("Digite 1 para SIM e 2 para NÃO");
 
@@ -20,5 +50,6 @@ public class VerificacaoDeValidacao {
 		}
 		return false;
 	}
+}
 
 }

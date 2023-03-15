@@ -1,5 +1,12 @@
 package jogo_100zao;
 
+/***
+ * 
+ * @author Linne202
+ * @since 20230311
+ *
+ */ 
+
 import java.util.Scanner;
 
 public class RespostaEstaCorreta {

@@ -27,6 +27,7 @@ public class Perguntas {
 	public static void iniciar() {
 
 		double premio = ThreadLocalRandom.current().nextDouble(0.5, 3);
+		boolean desejaDesistir;
 
 		Pergunta pergunta1 = new Pergunta();
 		pergunta1.frase = "............. P E R G U N T A  01 .............\n\nQual foi o país que inventou o chuveiro elétrico ?\n";
@@ -43,12 +44,12 @@ public class Perguntas {
 		if (respostaCorreta == false) {
 			return;
 		} else {
-			System.out.println("Seu prêmio atual é: R$" + String.format("%1$,.2f\n", premio));
+			System.out.println("- Você ganhou : R$" + String.format("%1$,.2f\n", premio));
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
 			System.out.println("Seu prêmio com desconto: R$" + String.format("%1$,.2f\n", premioFinalParticipante));
 			premio = Premio.calcularPremioFinal(premio);
-			boolean desejaDesistir = VerificacaoDeValidacao.desejaDesistir(premioFinalParticipante);
-			if(desejaDesistir == true) {
+			desejaDesistir = VerificacaoDeValidacao.desejaDesistir(premioFinalParticipante);
+			if (desejaDesistir == true) {
 				return;
 			}
 		}
@@ -67,11 +68,15 @@ public class Perguntas {
 		if (respostaCorreta == false) {
 			return;
 		} else {
-			System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f\n", premio));
+			System.out.println("- Seu prêmio atual é: R$" + String.format("%1$,.2f\n", premio));
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Seu prêmio com desconto:" + String.format("%1$,.2f\n", premioFinalParticipante));
+			System.out.println("Seu prêmio com desconto: R$" + String.format("%1$,.2f\n", premioFinalParticipante));
 			VerificacaoDeValidacao.desejaDesistir(premioFinalParticipante);
 			premio = Premio.calcularPremioFinal(premio);
+			if (desejaDesistir == true) {
+				return;
+			}
+
 		}
 
 		Pergunta pergunta3 = new Pergunta();
@@ -88,11 +93,15 @@ public class Perguntas {
 		if (respostaCorreta == false) {
 			return;
 		} else {
-			System.out.println("Seu prêmio atual é: " + String.format("%1$,.2f\n", premio));
+			System.out.println("- Seu prêmio atual é: R$" + String.format("%1$,.2f\n", premio));
 			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Seu prêmio com desconto:" + String.format("%1$,.2f\n", premioFinalParticipante));
+			System.out.println("Seu prêmio com desconto: R$" + String.format("%1$,.2f\n", premioFinalParticipante));
 			VerificacaoDeValidacao.desejaDesistir(premioFinalParticipante);
 			premio = Premio.calcularPremioFinal(premio);
+			if (desejaDesistir == true) {
+				return;
+			}
+			
 		}
 		Pergunta pergunta4 = new Pergunta();
 		pergunta4.frase = "............. P E R G U N T A  04 .............\n\nQual é a sigla do HD ?\n";
