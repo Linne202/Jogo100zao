@@ -35,7 +35,7 @@ public class Menu {
 				Perguntas.iniciar();
 				break;
 			case 2:
-				Creditos.mostrar();
+				Credits.mostrar();
 				break;
 			case 3:
 				Tutorial.mostrar();

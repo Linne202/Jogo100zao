@@ -27,11 +27,13 @@ public class VerificacaoDeValidacao {
 
 			switch (resposta) {
 			case 1:
+				resposta = sc.nextInt();
 				System.out.println("Obrigado, até mais!!!");
 				break;
 			case 2:
 				return false;
 			default:
+				resposta = sc.nextInt();
 				System.out.println("Valor digitado invalido\n");
 			}
 			

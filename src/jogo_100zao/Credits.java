@@ -7,7 +7,7 @@ package jogo_100zao;
  */
 //*
 
-public class Creditos {
+public class Credits {
 	
 	public static void mostrar() {
 		
