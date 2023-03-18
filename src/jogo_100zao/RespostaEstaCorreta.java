@@ -15,8 +15,6 @@ public class RespostaEstaCorreta {
 		
 		Scanner sc = new Scanner(System.in);
 		String respostaEscolhida = sc.nextLine();
-		
-		sc.close();
 
 		if (respostaEscolhida.equals(perg.respostaCorreta)) {
 			System.out.println("_____________ V O C Ê   A C E R T O U _____________\n");
@@ -25,7 +23,6 @@ public class RespostaEstaCorreta {
 			System.out.println("\n____________ Y O U   L O S E R ____________\n");
 			return false;
 		}
-		
 
 	}
 	
