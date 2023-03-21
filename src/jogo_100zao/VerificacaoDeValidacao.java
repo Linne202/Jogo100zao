@@ -10,6 +10,7 @@ import java.util.Scanner;
  */
 
 public class VerificacaoDeValidacao {
+<<<<<<< HEAD
 
 	@SuppressWarnings("resource")
 
@@ -35,5 +36,7 @@ public class VerificacaoDeValidacao {
 		return false;
 
 	}
+=======
+>>>>>>> 0ca4756f6136b2d0b23c7efc0ce9446307dcfd17
 
 }
