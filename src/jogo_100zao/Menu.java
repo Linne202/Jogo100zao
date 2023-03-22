@@ -25,7 +25,7 @@ public class Menu {
 		do {
 
 			mostrarMenu();
-			resposta = sc.nextInt();
+			resposta = Integer.parseInt(sc.nextLine());
 
 			switch (resposta) {
 			case 0:

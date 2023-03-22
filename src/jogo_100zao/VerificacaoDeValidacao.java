@@ -13,11 +13,22 @@ public class VerificacaoDeValidacao {
 
 	public static boolean textoDesejaDesistir(double premioAcumulado) {
 
-		System.out.println("Você deseja desistir?");
-		System.out.println("Digite 1 para SIM e 2 para NÃO");
-
 		Scanner sc = new Scanner(System.in);
-		int resposta = sc.nextInt();
+		boolean digitouErrado = true;
+		int resposta = 0;
+		do {
+			try {
+
+				System.out.println("Você deseja desistir?");
+				System.out.println("Digite 1 para SIM e 2 para NÃO");
+				resposta = Integer.parseInt(sc.nextLine());
+				digitouErrado = false;
+			} catch (Exception e) {
+				e.printStackTrace();
+				System.out.println("Você digitou um valor invalido");
+				digitouErrado = true;
+			}
+		} while (digitouErrado == true);
 
 		if (resposta == 1) {
 			double valorFinal = TaxaDesistencia.calcularPremioFinal(premioAcumulado);
