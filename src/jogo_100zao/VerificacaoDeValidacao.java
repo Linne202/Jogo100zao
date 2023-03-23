@@ -1,5 +1,6 @@
 package jogo_100zao;
 
+import java.util.Enumeration;
 import java.util.Scanner;
 
 /***
@@ -17,15 +18,14 @@ public class VerificacaoDeValidacao {
 		boolean digitouErrado = true;
 		int resposta = 0;
 		do {
-			try {
-
+			try { 
 				System.out.println("Você deseja desistir?");
 				System.out.println("Digite 1 para SIM e 2 para NÃO");
 				resposta = Integer.parseInt(sc.nextLine());
 				digitouErrado = false;
 			} catch (Exception e) {
-				e.printStackTrace();
-				System.out.println("Você digitou um valor invalido");
+				
+				System.out.println("\nVocê digitou um valor inválido.\nDigite um número corresponde com a sua vontade.\n");
 				digitouErrado = true;
 			}
 		} while (digitouErrado == true);
