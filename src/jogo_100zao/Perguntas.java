@@ -42,9 +42,8 @@ public class Perguntas {
 		boolean respostaCorreta = RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta1);
 
 		if (respostaCorreta == false) {
-			return;
-		} else {
 			Calculo.calculoPrimeiraPergunta(premio);
+			return;
 		}
 
 		Pergunta pergunta2 = new Pergunta();
@@ -57,13 +56,11 @@ public class Perguntas {
 
 		mostrarPergunta(pergunta2);
 		respostaCorreta = RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta2);
-
+		
 		if (respostaCorreta == false) {
+			Calculo.calculoPrimeiraPergunta(premio);
 			return;
-		} else {
-			Calculo.calcularPergunta(premio);
-			}
-
+		}
 
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = "............. P E R G U N T A  03 .............\n\nQuantos ossos tem um corpo humano ?\n";
@@ -76,12 +73,6 @@ public class Perguntas {
 		mostrarPergunta(pergunta3);
 		respostaCorreta = RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta3);
 
-		if (respostaCorreta == false) {
-			return;
-		} else {
-			Calculo.calcularPergunta(premio);
-			}
-		
 		Pergunta pergunta4 = new Pergunta();
 		pergunta4.frase = "............. P E R G U N T A  04 .............\n\nQual é a sigla do HD ?\n";
 		pergunta4.alternativaA = "a) Hard Definition";
