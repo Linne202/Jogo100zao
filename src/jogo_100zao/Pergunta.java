@@ -1,6 +1,5 @@
 package jogo_100zao;
 
-
 /**	
  * 
  * @author wiu

@@ -1,6 +1,5 @@
 package jogo_100zao;
 
-import java.util.Enumeration;
 import java.util.Scanner;
 
 /***

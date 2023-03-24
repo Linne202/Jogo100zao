@@ -44,15 +44,7 @@ public class Perguntas {
 		if (respostaCorreta == false) {
 			return;
 		} else {
-			System.out.println("- Você ganhou : R$" + String.format("%1$,.2f\n", premio));
-			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			premio = Premio.calcularPremioFinal(premio);
-			desejaDesistir = VerificacaoDeValidacao.textoDesejaDesistir(premioFinalParticipante);
-			if (desejaDesistir == true) {
-				return;
-			} else {
-				System.out.println("Seu prêmio com desconto: R$" + String.format("%1$,.2f\n", premioFinalParticipante));
-			}
+			Calculo.calculoPrimeiraPergunta(premio);
 		}
 
 		Pergunta pergunta2 = new Pergunta();
@@ -69,16 +61,9 @@ public class Perguntas {
 		if (respostaCorreta == false) {
 			return;
 		} else {
-			System.out.println("- Seu prêmio atual é: R$" + String.format("%1$,.2f\n", premio));
-			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Seu prêmio com desconto: R$" + String.format("%1$,.2f\n", premioFinalParticipante));
-			VerificacaoDeValidacao.textoDesejaDesistir(premioFinalParticipante);
-			premio = Premio.calcularPremioFinal(premio);
-			if (desejaDesistir == true) {
-				return;
+			Calculo.calcularPergunta(premio);
 			}
 
-		}
 
 		Pergunta pergunta3 = new Pergunta();
 		pergunta3.frase = "............. P E R G U N T A  03 .............\n\nQuantos ossos tem um corpo humano ?\n";
@@ -94,16 +79,9 @@ public class Perguntas {
 		if (respostaCorreta == false) {
 			return;
 		} else {
-			System.out.println("- Seu prêmio atual é: R$" + String.format("%1$,.2f\n", premio));
-			double premioFinalParticipante = TaxaDesistencia.calcularPremioFinal(premio);
-			System.out.println("Seu prêmio com desconto: R$" + String.format("%1$,.2f\n", premioFinalParticipante));
-			VerificacaoDeValidacao.textoDesejaDesistir(premioFinalParticipante);
-			premio = Premio.calcularPremioFinal(premio);
-			if (desejaDesistir == true) {
-				return;
+			Calculo.calcularPergunta(premio);
 			}
-
-		}
+		
 		Pergunta pergunta4 = new Pergunta();
 		pergunta4.frase = "............. P E R G U N T A  04 .............\n\nQual é a sigla do HD ?\n";
 		pergunta4.alternativaA = "a) Hard Definition";
