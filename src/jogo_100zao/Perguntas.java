@@ -42,8 +42,9 @@ public class Perguntas {
 		boolean respostaCorreta = RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta1);
 
 		if (respostaCorreta == false) {
-			Calculo.calculoPrimeiraPergunta(premio);
 			return;
+		} else {
+			Calculo.calculoPrimeiraPergunta(premio);
 		}
 
 		Pergunta pergunta2 = new Pergunta();
@@ -58,8 +59,9 @@ public class Perguntas {
 		respostaCorreta = RespostaEstaCorreta.mostrarSeRespostaEstaCorreta(pergunta2);
 		
 		if (respostaCorreta == false) {
-			Calculo.calculoPrimeiraPergunta(premio);
 			return;
+		} else {
+			Calculo.calculoPrimeiraPergunta(premio);
 		}
 
 		Pergunta pergunta3 = new Pergunta();
